@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    	<table class="table table-hover">
+    		<thead>
+    		<tr>
+    			<th>Display Name</th>
+    			<th>Game Hour (GMT)</th>
+    			<th>Number of times killed</th>
+    		</tr>
+    		</thead>
+    		<tbody>
+    		<% for(var i=0; i<results.length; i++) {%>
+    		<tr>
+    			<td><%= results[i]._id.displayname %></td>
+    			<td><%= results[i]._id.eventhour %></td>
+    			<td><%= results[i].numKills %></td>
+    		</tr>
+    		<% } %>
+    		</tbody>
+    	</table>
+  </body>
+</html>
